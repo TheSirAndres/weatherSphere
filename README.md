@@ -1,6 +1,6 @@
 # WeatherSphere - Weather Dashboard
 
-![WeatherSphere Banner](https://via.placeholder.com/1200x400/4361ee/ffffff?text=WeatherSphere+Weather+Dashboard)
+[![Screenshot-2025-08-13-164000.png](https://i.postimg.cc/fLCHDfjR/Screenshot-2025-08-13-164000.png)](https://postimg.cc/sQBPJSNk)
 
 WeatherSphere is a modern, responsive weather dashboard that allows users to search for and view current weather conditions in cities worldwide. With its clean UI, dark/light mode toggle, and API integration, it serves as both a functional weather application and a developer tool for testing weather APIs.
 
