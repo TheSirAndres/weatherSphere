@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherSphere | API Testing Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <i class="fas fa-cloud-sun"></i>
+          <span>WeatherSphere</span>
+        </div>
+
+        <button class="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-heart"></i> Favorites</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-code"></i> API Console</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="btn btn-outline" id="login-btn">
+            <i class="fas fa-sign-in-alt"></i> Log In
+          </button>
+          <button class="btn" id="register-btn">
+            <i class="fas fa-user-plus"></i> Register
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <div class="dashboard-grid">
+        <div class="main-content">
+          <!-- Weather Form -->
+          <div class="weather-form fade-in">
+            <h2 class="form-title">
+              <i class="fas fa-search-location"></i> Search Weather
+            </h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  class="form-control"
+                  placeholder="Enter city name"
+                  value="New York"
+                />
+              </div>
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" class="form-control">
+                  <option value="US">United States</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="CA">Canada</option>
+                  <option value="AU">Australia</option>
+                  <option value="JP">Japan</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="BR">Brazil</option>
+                  <option value="IN">India</option>
+                  <option value="CN">China</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn" id="search-btn">
+              <i class="fas fa-search"></i> Get Weather
+            </button>
+          </div>
+
+          <!-- Weather Display -->
+          <div class="weather-display fade-in">
+            <div class="city-header">
+              <h2 class="city-name"></h2>
+              <button class="favorite-btn" title="Add to favorites">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+
+            <div class="current-weather">
+              <div class="weather-icon">
+                <img src="" alt="Weather Icon"/>
+              </div>
+              <div>
+                <div class="temp-main"></div>
+                <div class="weather-description"></div>
+                <div class="temp-minmax">
+                  <div class="minmax-item">
+                    <i class="fas fa-arrow-up"></i>
+                    <p></p>
+                  </div>
+                  <div class="minmax-item">
+                    <i class="fas fa-arrow-down"></i>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="weather-details">
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-wind"></i>
+                </div>
+                <div class="detail-label">Wind Speed</div>
+                <div class="detail-value">12 km/h</div>
+              </div>
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-tint"></i>
+                </div>
+                <div class="detail-label">Humidity</div>
+                <div class="detail-value">65%</div>
+              </div>
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-compress"></i>
+                </div>
+                <div class="detail-label">Pressure</div>
+                <div class="detail-value">1015 hPa</div>
+              </div>
+              <div class="detail-card">
+                <div class="detail-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="detail-label">Visibility</div>
+                <div class="detail-value">10 km</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- API Console -->
+          <div class="api-console">
+            <div class="console-header">
+              <h2 class="panel-title">
+                <i class="fas fa-code"></i> API Console
+              </h2>
+            </div>
+
+            <div class="endpoint-info">
+              <strong>Endpoint:</strong>
+              <span class="endpoint-url"
+                >GET /api/weather?city={city}&country={country}</span
+              >
+            </div>
+
+            <div class="response-display">
+              { "city": "New York", "country": "US", "weather": { "temperature":
+              24.5, "feels_like": 25.2, "description": "Sunny", "icon": "01d",
+              "humidity": 65, "pressure": 1015, "wind_speed": 12.3,
+              "wind_direction": 180, "cloudiness": 10, "visibility": 10000 },
+              "forecast": { "daily": [ { "dt": 1628251200, "temp": { "day":
+              24.5, "min": 18.2, "max": 26.1 }, "weather": [ { "description":
+              "Sunny", "icon": "01d" } ] } ] } }
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="panel">
+            <h2 class="panel-title">
+              <i class="fas fa-history"></i> Recent Searches
+            </h2>
+            <ul class="favorites-list">
+              <li class="favorite-item">
+                <span class="favorite-name">London, GB</span>
+                <span class="favorite-temp">18°C</span>
+                <button class="remove-btn"><i class="fas fa-times"></i></button>
+              </li>
+              <li class="favorite-item">
+                <span class="favorite-name">Tokyo, JP</span>
+                <span class="favorite-temp">26°C</span>
+                <button class="remove-btn"><i class="fas fa-times"></i></button>
+              </li>
+              <li class="favorite-item">
+                <span class="favorite-name">Paris, FR</span>
+                <span class="favorite-temp">22°C</span>
+                <button class="remove-btn"><i class="fas fa-times"></i></button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel-title">
+              <i class="fas fa-heart"></i> Favorite Cities
+            </h2>
+            <ul class="favorites-list">
+              <li class="favorite-item">
+                <span class="favorite-name">San Francisco, US</span>
+                <span class="favorite-temp">20°C</span>
+                <button class="remove-btn"><i class="fas fa-times"></i></button>
+              </li>
+              <li class="favorite-item">
+                <span class="favorite-name">Sydney, AU</span>
+                <span class="favorite-temp">23°C</span>
+                <button class="remove-btn"><i class="fas fa-times"></i></button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel-title">
+              <i class="fas fa-info-circle"></i> API Information
+            </h2>
+            <p>
+              Test your weather API with this dashboard. Simply enter a city and
+              country to see real-time weather data.
+            </p>
+            <div style="margin-top: 15px">
+              <button class="btn btn-outline btn-sm">
+                <i class="fas fa-book"></i> Documentation
+              </button>
+              <button class="btn btn-sm" style="margin-left: 10px">
+                <i class="fas fa-key"></i> Get API Key
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div class="copyright">
+          &copy; 2023 WeatherSphere. All rights reserved.
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Log In to Your Account</h3>
+          <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <form class="modal-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input
+              type="email"
+              id="login-email"
+              class="form-control"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              class="form-control"
+              placeholder="••••••••"
+            />
+          </div>
+          <button type="submit" class="btn" style="width: 100%">Log In</button>
+        </form>
+        <div style="text-align: center; margin-top: 20px">
+          <p>
+            Don't have an account?
+            <a href="#" id="switch-to-register" style="color: var(--primary)"
+              >Register</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Create an Account</h3>
+          <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <form class="modal-form">
+          <div class="form-group">
+            <label for="register-name">Full Name</label>
+            <input
+              type="text"
+              id="register-name"
+              class="form-control"
+              placeholder="John Doe"
+            />
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email Address</label>
+            <input
+              type="email"
+              id="register-email"
+              class="form-control"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="register-password">Password</label>
+            <input
+              type="password"
+              id="register-password"
+              class="form-control"
+              placeholder="••••••••"
+            />
+          </div>
+          <div class="form-group">
+            <label for="register-confirm">Confirm Password</label>
+            <input
+              type="password"
+              id="register-confirm"
+              class="form-control"
+              placeholder="••••••••"
+            />
+          </div>
+          <button type="submit" class="btn" style="width: 100%">
+            Create Account
+          </button>
+        </form>
+        <div style="text-align: center; margin-top: 20px">
+          <p>
+            Already have an account?
+            <a href="#" id="switch-to-login" style="color: var(--primary)"
+              >Log In</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
