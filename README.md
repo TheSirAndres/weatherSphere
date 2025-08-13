@@ -48,9 +48,9 @@ D --> G[Search History Tracking]
 
 | Light Mode | Dark Mode |
 |------------|-----------|
-| ![Light Mode](https://via.placeholder.com/400x600/f8f9fa/333333?text=Light+Mode+Interface) | ![Dark Mode][![Screenshot-2025-08-13-162758.png](https://i.postimg.cc/g23Fkt7r/Screenshot-2025-08-13-162758.png)](https://postimg.cc/HrWP6zdC) |
+| [![Screenshot-2025-08-13-163419.png](https://i.postimg.cc/02wN4WCx/Screenshot-2025-08-13-163419.png)](https://postimg.cc/KRmFk5Vs) | [![Screenshot-2025-08-13-162758.png](https://i.postimg.cc/W3Y4BxKp/Screenshot-2025-08-13-162758.png)](https://postimg.cc/5Yv1vKbD) |
 | **Dashboard View** | **API Console** |
-| ![Dashboard](https://via.placeholder.com/600x400/ffffff/333333?text=Dashboard+View) | ![API Console](https://via.placeholder.com/600x400/1e293b/f0f0f0?text=API+Console) |
+| ![Dashboard](https://via.placeholder.com/600x400/ffffff/333333?text=Dashboard+View) | [![Screenshot-2025-08-13-163510.png](https://i.postimg.cc/63qWfYQk/Screenshot-2025-08-13-163510.png)](https://postimg.cc/FdtX9b3p) |
 
 ## Installation
 
