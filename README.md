@@ -125,9 +125,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Maintainer: [Your Name]  
-Email: your.email@example.com  
-Project Link: [https://github.com/your-username/weathersphere](https://github.com/your-username/weathersphere)
+Project Maintainer: Andres Alpizar[TheSirAndres]  
+Email: joseandresalpizarmurillo0@gmail.com
+Project Link: [https://github.com/TheSirAndres/weathersphere](https://github.com/TheSirAndres/weathersphere)
 
 ## Acknowledgements
 
@@ -139,10 +139,10 @@ Project Link: [https://github.com/your-username/weathersphere](https://github.co
 > **Development Roadmap**  
 > | Feature | Status | Target Release |
 > |---------|--------|----------------|
-> | User Authentication | Planned | Q3 2023 |
-> | Favorite Cities | In Development | Q4 2023 |
-> | Recent Searches | Planned | Q1 2024 |
-> | User Profiles | Planned | Q2 2024 |
+> | User Authentication | Planned | Q4 2025 |
+> | Favorite Cities | In Development | Q3 2025 |
+> | Recent Searches | In Development | Q3 2025 |
+> | User Profiles | Planned | Q4 2025 |
 
 ---
 
