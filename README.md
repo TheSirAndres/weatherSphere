@@ -48,7 +48,7 @@ D --> G[Search History Tracking]
 
 | Light Mode | Dark Mode |
 |------------|-----------|
-| ![Light Mode](https://via.placeholder.com/400x600/f8f9fa/333333?text=Light+Mode+Interface) | ![Dark Mode]([![Screenshot-2025-08-13-162758.png](https://i.postimg.cc/g23Fkt7r/Screenshot-2025-08-13-162758.png)](https://postimg.cc/HrWP6zdC)) |
+| ![Light Mode](https://via.placeholder.com/400x600/f8f9fa/333333?text=Light+Mode+Interface) | ![Dark Mode](https://postimg.cc/HrWP6zdC) |
 | **Dashboard View** | **API Console** |
 | ![Dashboard](https://via.placeholder.com/600x400/ffffff/333333?text=Dashboard+View) | ![API Console](https://via.placeholder.com/600x400/1e293b/f0f0f0?text=API+Console) |
 
