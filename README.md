@@ -1,104 +1,93 @@
-WeatherSphere - Weather Dashboard
-Overview
+# WeatherSphere - Weather Dashboard
+
+![WeatherSphere Banner](https://via.placeholder.com/1200x400/4361ee/ffffff?text=WeatherSphere+Weather+Dashboard)
+
 WeatherSphere is a modern, responsive weather dashboard that allows users to search for and view current weather conditions in cities worldwide. With its clean UI, dark/light mode toggle, and API integration, it serves as both a functional weather application and a developer tool for testing weather APIs.
 
-[!NOTE]
-Upcoming Features:
+> [!IMPORTANT]  
+> **Upcoming Features**  
+> - Favorite cities functionality  
+> - Recent searches history  
+> - User registration system  
+> - Personalized weather preferences  
 
-Favorite cities functionality
+## Features
 
-Recent searches history
+### Current Functionality
+- **City Search**: Get weather by city and country
+- **Detailed Weather Display**:
+  - Current temperature with min/max values
+  - Weather conditions and description
+  - Wind speed, humidity, pressure, and visibility
+- **API Console**: Real-time API request/response display
+- **UI Features**:
+  - Dark/Light mode toggle
+  - Responsive design for all devices
+  - Smooth animations and transitions
+- **User Interface**:
+  - Login/Registration modals
+  - Favorite cities panel
+  - Recent searches panel
 
-User registration system
+### Planned Features
+```mermaid
+graph LR
+A[Current Features] --> B[User Registration]
+A --> C[Favorite Cities]
+A --> D[Recent Searches]
+B --> E[Personalized Profiles]
+C --> F[Save Favorite Locations]
+D --> G[Search History Tracking]
+```
 
-Personalized weather preferences
+## Live Demo
 
-Features
-Current Functionality
-City Search: Get weather by city and country
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/weathersphere-8x4c2f)
 
-Detailed Weather Display:
+## Screenshots
 
-Current temperature with min/max values
+| Light Mode | Dark Mode |
+|------------|-----------|
+| ![Light Mode](https://via.placeholder.com/400x600/f8f9fa/333333?text=Light+Mode+Interface) | ![Dark Mode](https://via.placeholder.com/400x600/1e293b/f0f0f0?text=Dark+Mode+Interface) |
+| **Dashboard View** | **API Console** |
+| ![Dashboard](https://via.placeholder.com/600x400/ffffff/333333?text=Dashboard+View) | ![API Console](https://via.placeholder.com/600x400/1e293b/f0f0f0?text=API+Console) |
 
-Weather conditions and description
+## Installation
 
-Wind speed, humidity, pressure, and visibility
-
-API Console: Real-time API request/response display
-
-UI Features:
-
-Dark/Light mode toggle
-
-Responsive design for all devices
-
-Smooth animations and transitions
-
-User Interface:
-
-Login/Registration modals
-
-Favorite cities panel (static)
-
-Recent searches panel (static)
-
-Planned Features
-Diagram
-Code
-
-
-
-
-
-
-
-Live Demo
-https://codesandbox.io/static/img/play-codesandbox.svg
-
-Screenshots
-https://via.placeholder.com/800x500/4361ee/ffffff?text=WeatherSphere+Dashboard
-https://via.placeholder.com/400x600/1e293b/f0f0f0?text=Dark+Mode+Interface
-
-Installation
 To run WeatherSphere locally:
 
-Clone the repository:
-
-bash
+1. Clone the repository:
+```bash
 git clone https://github.com/your-username/weathersphere.git
 cd weathersphere
-Open index.html in your browser
+```
 
-(Optional) Add your OpenWeatherMap API key to js/script.js:
+2. Open `index.html` in your browser
 
-javascript
+3. (Optional) Add your OpenWeatherMap API key to `js/script.js`:
+```javascript
 const appID = "your-api-key-here";
-Usage
-Enter a city name in the search field
+```
 
-Select a country from the dropdown
+## Usage
 
-Click "Get Weather"
+1. Enter a city name in the search field
+2. Select a country from the dropdown
+3. Click "Get Weather"
+4. View current weather conditions and details
+5. Use the heart icon to favorite locations
+6. Toggle between light/dark mode using the moon icon
 
-View current weather conditions and details
+## Technical Details
 
-Use the heart icon to favorite locations (upcoming feature)
+### Tech Stack
+- **Frontend**: HTML5, CSS3, JavaScript
+- **API**: OpenWeatherMap
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts (Poppins, Raleway)
 
-Toggle between light/dark mode using the moon icon
-
-Technical Details
-Tech Stack
-Frontend: HTML5, CSS3, JavaScript
-
-API: OpenWeatherMap
-
-Icons: Font Awesome
-
-Fonts: Google Fonts (Poppins, Raleway)
-
-File Structure
-text
+### File Structure
+```
 weathersphere/
 ├── index.html
 ├── css/
@@ -107,8 +96,10 @@ weathersphere/
 │   └── script.js
 ├── images/
 └── README.md
-API Integration
-javascript
+```
+
+### API Integration
+```javascript
 async function fetchWeatherData(city, country) {
   const appID = "your-api-key";
   const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${country}&appid=${appID}`;
@@ -116,40 +107,43 @@ async function fetchWeatherData(city, country) {
   
   // API calls and data processing
 }
-Contributing
+```
+
+## Contributing
+
 We welcome contributions! Please follow these steps:
 
-Fork the repository
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+## License
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Push to the branch (git push origin feature/AmazingFeature)
+## Contact
 
-Open a Pull Request
+Project Maintainer: [Your Name]  
+Email: your.email@example.com  
+Project Link: [https://github.com/your-username/weathersphere](https://github.com/your-username/weathersphere)
 
-License
-Distributed under the MIT License. See LICENSE for more information.
+## Acknowledgements
 
-Contact
-Project Maintainer: [Your Name]
-Email: your.email@example.com
-Project Link: https://github.com/your-username/weathersphere
+- [OpenWeatherMap](https://openweathermap.org/) for their free weather API
+- [Font Awesome](https://fontawesome.com/) for the beautiful icons
+- [Google Fonts](https://fonts.google.com/) for the typography
 
-Acknowledgements
-OpenWeatherMap for their free weather API
+> [!NOTE]
+> **Development Roadmap**  
+> | Feature | Status | Target Release |
+> |---------|--------|----------------|
+> | User Authentication | Planned | Q3 2023 |
+> | Favorite Cities | In Development | Q4 2023 |
+> | Recent Searches | Planned | Q1 2024 |
+> | User Profiles | Planned | Q2 2024 |
 
-Font Awesome for the beautiful icons
+---
 
-Google Fonts for the typography
-
-[!IMPORTANT]
-Upcoming Development Schedule:
-
-Feature	Expected Completion
-User Registration	Q3 2023
-Favorite Cities	Q4 2023
-Recent Searches	Q1 2024
-User Profiles	Q2 2024
-WeatherSphere - Your weather, your way. Stay informed in style.
+**WeatherSphere** - Your weather, your way. Stay informed in style.
