@@ -42,7 +42,7 @@ D --> G[Search History Tracking]
 
 ## Live Demo
 
-[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/weathersphere-8x4c2f)
+[![Open in Netlify]([https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/weathersphere-8x4c2f](https://weatherspherewebsite.netlify.app/#))
 
 ## Screenshots
 
