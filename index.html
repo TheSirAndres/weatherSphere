@@ -12,8 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/cloud-sun-solid-full.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/cloud-sun-solid-full.svg" type="image/svg+xml" />
   </head>
   <body>
     <!-- Header -->
@@ -24,8 +24,10 @@
           <span>WeatherSphere</span>
         </div>
 
-        <button class="mobile-toggle">
-          <i class="fas fa-bars"></i>
+        <button class="mobile-toggle" id="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
 
         <nav>
@@ -58,6 +60,37 @@
         </div>
       </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li>
+          <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-heart"></i> Favorites</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-code"></i> API Console</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+        </li>
+      </ul>
+
+      <div class="mobile-actions">
+        <button class="theme-toggle mobile-theme-toggle">
+          <i class="fas fa-moon"></i> Change Theme
+        </button>
+        <button class="btn btn-outline" id="mobile-login-btn">
+          <i class="fas fa-sign-in-alt"></i> Log In
+        </button>
+        <button class="btn" id="mobile-register-btn">
+          <i class="fas fa-user-plus"></i> Register
+        </button>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <main class="container">
@@ -111,7 +144,7 @@
 
             <div class="current-weather">
               <div class="weather-icon">
-                <img src="" alt="Weather Icon"/>
+                <img src="" alt="Weather Icon" />
               </div>
               <div>
                 <div class="temp-main"></div>
@@ -364,7 +397,7 @@
         </div>
       </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
